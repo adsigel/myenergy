@@ -1,0 +1,25 @@
+#bg_image_overlay {
+position: fixed;
+top: 0;
+left: 0;
+height: 100%;
+width: 100%;
+z-index: 1;
+background: url('http://i.imgur.com/CW3q0.jpg') 0px 0px repeat;
+background-image: url('http://i.imgur.com/CW3q0.jpg'); 
+background-position-x: 0px;
+background-position-y: 0px;
+background-size: initial;
+background-repeat-x: repeat;
+background-repeat-y: repeat;
+background-attachment: initial;
+background-origin: initial;
+background-clip: initial;
+background-color: rgba(30, 45, 50, 0.50);
+background-color: transparent;
+background-color: rgba(30, 45, 50, 0.50);
+filter: progid:DXImageTransform.Microsoft.gradient(startColorstr=#EF0D0F12,endColorstr=#EF0D0F12);
+zoom: 1;
+display: block !important;
+color: #ffffff;
+}

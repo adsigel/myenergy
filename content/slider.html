@@ -1,0 +1,60 @@
+<html>
+<head>
+<title>Nettuts jQuery Sliding Panel</title>
+<link href="../assets/css/sliderstyle.css" rel="stylesheet">
+<script src="../assets/js/jquery-1.8.3.js" type="text/javascript"></script>
+
+</head>
+<body>
+<div id="header">
+</div>
+<div id="header_stripe"></div>
+<div id="wrapper">                  <!--Contains the button and panel-->
+    <div id="top_panel">                <!--Contains the panel itself-->
+      <div id="panel"> <!--This div will serve as the background of the panel-->
+       	<div id="panel_contents"></div>
+        <img class="border_pic" src="../assets/img/tutsplus.jpg" alt="Screenshot" />
+        <div class="border" id="login">
+          <p>Username:
+      		  <input type="text" size="15" name="username" id="username" />
+      		  <br>
+      		  Password:
+      		  <input type="password" size="15" name="password" id="password" />
+      		  <br>
+      		  <input type="button" accesskey="1" id="login_btn" name="login" value="Login" />
+          </p>
+        </div>
+     </div>
+      <div class="panel_button" style="display: visible;"><img src="../assets/img/expand.png" alt="expand" />
+          <a href="#">Login Here</a>
+      </div>
+      <div class="panel_button" id="hide_button" style="display: none;"><img src="../assets/img/collapse.png" alt="collapse" />
+          <a href="#">Hide</a>
+      </div>
+  </div>
+</div>
+<div id="content">
+  <p>You're implying that a group composed entirely of female animals will... breed? Dr. Ian Malcolm: No, I'm, I'm simply saying that life, uh... finds a way.<br><br>God creates dinosaurs. God destroys dinosaurs. God creates man. Man destroys God. Man creates dinosaurs. Dinosaurs eat man... woman inherits the earth.</br>
+</div>
+
+<script>
+$(document).ready(function() {
+  $("div.panel_button").click(function(){
+    $("div#panel").animate({
+      height: "500px"})
+    $("div.panel_button").toggle();
+  
+  }); 
+  
+   $("div#hide_button").click(function(){
+    $("div#panel").animate({
+      height: "10px"
+    }, "fast");
+    
+  
+   });  
+  
+});
+</script>
+</body>
+</html>
