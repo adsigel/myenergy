@@ -11,12 +11,84 @@
     <!-- Le styles -->
     <link href="../assets/css/myenergy_bootstrap.css" rel="stylesheet">
     <link href="../assets/css/adamStyle.css" rel="stylesheet">
-    <style type="text/css">
+    <style>
       body {
         padding-top: 60px;
         padding-bottom: 40px;
       }
-    </style>
+	/*<![CDATA[*/
+	/** ================================ External Header == **/
+	header.external {
+	background:#2c3337 url(../images/bg_ultrablur.png) 0px 0px repeat;
+	border-bottom:2px solid #13161d;
+	box-shadow:0px 1px 5px rgba(0,0,0,0.5);
+	-webkit-box-shadow:0px 1px 5px rgba(0,0,0,0.5);
+	-moz-box-shadow:0px 1px 5px rgba(0,0,0,0.5);
+	width:100%;
+	display:block;
+	position:fixed;
+	top:0;
+	padding:5px 15px;
+	z-index: 10;
+	font-family: "proxima-nova", "Helvetica Neue", "Helvetica","Arial", sans-serif;
+	min-width:960px;
+	}
+	header.external h1.logo{
+	margin-top:0px;
+	}
+	header.external ul.public_nav{
+	float:right;
+	margin:0px;
+	padding:0px;
+	list-style:none;
+	text-align:left;
+	margin-right:20px;
+	margin-bottom:8px;
+	}
+	header.external ul.public_nav li {
+	float:left;
+	font-size:13px;
+	color:#919a9e;
+	font-weight: 500;
+	margin-top:12px;
+	padding:0px 10px;
+	}
+	header.external ul.public_nav li a{
+	margin-top:-4px;
+	padding:3px 10px;
+	color:#919a9e;
+	display: inline-block;
+	}
+	header.external ul.public_nav li a:hover{
+	color:#00a3e7;
+	text-decoration:none;
+	}
+	header.external ul.public_nav li a.btn{
+	background:#ed7329;
+	text-shadow:none !important;
+	border:0px;
+	color:#fff;
+	font-weight: 500;
+	margin-top:-4px;
+	margin-right:3px;
+	}
+	header.external ul.public_nav li a.btn.create_link{
+	background:#ed7329;
+	}
+	header.external ul.public_nav li a.btn.create_link:hover{
+	background:#d86304;
+	}
+	header.external ul li a.btn.account_link{
+	background:#505a5f;
+	}
+	header.external ul.public_nav li a.btn.account_link:hover{
+	background:#405560;
+	}
+	header.external .mobile_nav {
+	display:none;
+	}
+	/*]]>*/
+	</style>
     <link href="../assets/css/bootstrap-responsive.css" rel="stylesheet">
 
     <!-- HTML5 shim, for IE6-8 support of HTML5 elements -->
@@ -31,83 +103,11 @@
     <link rel="apple-touch-icon-precomposed" sizes="72x72" href="../assets/ico/apple-touch-icon-72-precomposed.png">
     <link rel="apple-touch-icon-precomposed" href="../assets/ico/apple-touch-icon-57-precomposed.png">
   </head>
+
+<body>
 <div id='bg_image_overlay'>
 &nbsp;
 </div>
-<style>
-/*<![CDATA[*/
-/** ================================ External Header == **/
-header.external {
-background:#2c3337 url(../images/bg_ultrablur.png) 0px 0px repeat;
-border-bottom:2px solid #13161d;
-box-shadow:0px 1px 5px rgba(0,0,0,0.5);
--webkit-box-shadow:0px 1px 5px rgba(0,0,0,0.5);
--moz-box-shadow:0px 1px 5px rgba(0,0,0,0.5);
-width:100%;
-display:block;
-position:fixed;
-top:0;
-padding:5px 15px;
-z-index: 10;
-font-family: "proxima-nova", "Helvetica Neue", "Helvetica","Arial", sans-serif;
-min-width:960px;
-}
-header.external h1.logo{
-margin-top:0px;
-}
-header.external ul.public_nav{
-float:right;
-margin:0px;
-padding:0px;
-list-style:none;
-text-align:left;
-margin-right:20px;
-margin-bottom:8px;
-}
-header.external ul.public_nav li {
-float:left;
-font-size:13px;
-color:#919a9e;
-font-weight: 500;
-margin-top:12px;
-padding:0px 10px;
-}
-header.external ul.public_nav li a{
-margin-top:-4px;
-padding:3px 10px;
-color:#919a9e;
-display: inline-block;
-}
-header.external ul.public_nav li a:hover{
-color:#00a3e7;
-text-decoration:none;
-}
-header.external ul.public_nav li a.btn{
-background:#ed7329;
-text-shadow:none !important;
-border:0px;
-color:#fff;
-font-weight: 500;
-margin-top:-4px;
-margin-right:3px;
-}
-header.external ul.public_nav li a.btn.create_link{
-background:#ed7329;
-}
-header.external ul.public_nav li a.btn.create_link:hover{
-background:#d86304;
-}
-header.external ul li a.btn.account_link{
-background:#505a5f;
-}
-header.external ul.public_nav li a.btn.account_link:hover{
-background:#405560;
-}
-header.external .mobile_nav {
-display:none;
-}
-/*]]>*/
-</style>
 <header class='external clearfix'>
 <h1 class='logo'>
 <a href='/'>MyEnergy</a>
