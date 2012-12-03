@@ -10,7 +10,9 @@ height: 100%;
 width: 100%;
 z-index: 1;
 background: url('http://i.imgur.com/CW3q0.jpg') 0px 0px repeat;
+/*Need to relocate image from remote to local storage*/
 background-image: url('http://i.imgur.com/CW3q0.jpg'); 
+/*Need to relocate image from remote to local storage*/
 background-position-x: 0px;
 background-position-y: 0px;
 background-size: initial;
@@ -40,9 +42,11 @@ text-align:center;
 height:120px;
 width:420px;
 opacity:.65;
+/*alignment off between #zipbox and #submit objects, not responsive*/
 }
 #zipbox.placeholder {
 padding-top:20px;
+/*Placeholder text is top aligned, need to align vertical middle*/
 }
 #submit {
 position:fixed;
@@ -74,6 +78,7 @@ margin-right:10px;
 margin-top:5px;
 margin-bottom:5px;
 }
+/*For all 3 #bottom objects, CTA buttons need re-styling, especially on mouseover/hover*/
 #bottom_email {
   padding:10px;
   background-color: hsl(201, 100%, 30%) !important;
