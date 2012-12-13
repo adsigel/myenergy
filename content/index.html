@@ -53,8 +53,8 @@
             <div class="navbar-form pull-right">
             <ul class="nav">
               <!-- Need to confirm our headers and add appropriate links -->
-              <li><a href="http://www.myenergy.com/about">Learn about MyEnergy</a></li>
-              <li><a href="http://www.greenbuttondata.org/greenabout.html">Learn about the Green Button</a></li>
+              <li><a href="#GreenButton" id="jumptoGreen">Learn about the Green Button</a></li>
+              <li><a href="#MyEnergy" id="jumptoMyEnergy">Learn about MyEnergy</a></li>
               <li><a href="http://web.myenergy.com/">Read our Blog</a></li>
               <li><a href="https://www.myenergy.com/utilities">For Utilities</a></li>
               <li><a href="https://twitter.com/myenergy">Follow Us</a></li>
@@ -79,19 +79,15 @@
 				<button id="submit" type="submit" formaction="./404.html" class="btn btn-green"><img id="greenbutton" src="../images/greenbutton.png" alt="green-button" />Show me how to save</button>
 			</form>
 			<img id="logos" src="../assets/img/myenergy+gbi.png" alt="myenergy-greenbutton" />
-      <br />
-      <p id="GBI">The Green Button is a White House initiative aimed at providing transparency to homeowners on their energy usage. Customers of any utility company should be able to securely download their utility usage, arming them with the power to make better decisions, save energy, and ultimately save money. Click <a href="http://www.greenbuttondata.org/greenabout.html">here</a> to learn more about the Green Button Initiative.</p>
-		<!--
-      	<form>
-      	
-      	
-      	</form>
-		-->
-		</div>
-
-        
-
+      <br /><br>
+        <p id="GBI"><h3>What is the Green Button?</h3><h2>The Green Button is a White House initiative aimed at providing transparency to homeowners on their energy usage. Customers of any utility company should be able to securely download their utility usage, arming them with the power to make better decisions, save energy, and ultimately save money. Click <a href="http://www.greenbuttondata.org/greenabout.html">here</a> to learn more about the Green Button Initiative.</h2></p><br><a class="BackToTop">Back to top</a>
+        <p id="about"><br><h3>About MyEnergy</h3><h2>MyEnergy is a company that provides transparency to American homeowners on their energy usage. Its data delivery system expands data delivery coverage from approximately 25 million Americans to over 300 million. It allows users to download their Green Button Data with only one click. Now, you can track and reduce your home energy usage, compare usage to others, and in turn save both energy and money. Click <a href="http://www.myenergy.com/about">here</a> to learn more about MyEnergy.</h2><br><a class="BackToTop">Back to top</a>
+        <p><br><h3>Where is Green Button Data Available?</h3><br><h2>Map of current Green Button data availability directly from <b>utilities</b>:</h2><br>
+        <img class="gb_map" id="gb_today" src="../assets/img/gb_today.jpg" />
+        <p><h2>Map of current Green Button data availability from <b>MyEnergy</b>:</h2><br>
+        <img class="gb_map" id="gb_myenergy" src="../assets/img/gb_myenergy.jpg" /><a class="BackToTop">Back to top</a>
     </div>
+
 <!--
 <div class="bottomButton">
    <div id="bottom_email"><img id="hide_button" src="../assets/img/hide-01.png" alt="hide-button"><br>Want to learn more about reducing your utility bills?<br><br>
@@ -172,51 +168,80 @@
    
     
     <!-- Need to alter these scripts and assign the "collapsing" animation to a specific object (close button).  Otherwise, it's impossible to enter data. -->
-    <script>
-    $(document).ready(function(){
-  TriggerClick = 0;
+//     <script>
+//     $(document).ready(function(){
+//   TriggerClick = 0;
 
-  $("#bottom_email").click(function(){
-    if(TriggerClick==0){
-         TriggerClick=1;
-         $("#bottom_email").animate({height:'180px'}, 500);
-    }else{
-         TriggerClick=0;
-         $("#bottom_email").animate({height:'56px'}, 500);
-    };
-  });
-});
-$(document).ready(function(){
-  TriggerClick = 0;
+//   $("#bottom_email").click(function(){
+//     if(TriggerClick==0){
+//          TriggerClick=1;
+//          $("#bottom_email").animate({height:'180px'}, 500);
+//     }else{
+//          TriggerClick=0;
+//          $("#bottom_email").animate({height:'56px'}, 500);
+//     };
+//   });
+// });
+// $(document).ready(function(){
+//   TriggerClick = 0;
 
-  $("#bottom_join").click(function(){
-    if(TriggerClick==0){
-         TriggerClick=1;
-         $("#bottom_join").animate({height:'370px'}, 500);
-    }else{
-         TriggerClick=0;
-         $("#bottom_join").animate({height:'56px'}, 500);
-    };
-  });
-});
-$(document).ready(function(){
-  TriggerClick = 0;
+//   $("#bottom_join").click(function(){
+//     if(TriggerClick==0){
+//          TriggerClick=1;
+//          $("#bottom_join").animate({height:'370px'}, 500);
+//     }else{
+//          TriggerClick=0;
+//          $("#bottom_join").animate({height:'56px'}, 500);
+//     };
+//   });
+// });
+// $(document).ready(function(){
+//   TriggerClick = 0;
 
-  $("#bottom_download").click(function(){
-    if(TriggerClick==0){
-         TriggerClick=1;
-         $("#bottom_download").animate({height:'480px'}, 500);
-    }else{
-         TriggerClick=0;
-         $("#bottom_download").animate({height:'56px'}, 500);
-    };
-  });
-});
-    </script>
+//   $("#bottom_download").click(function(){
+//     if(TriggerClick==0){
+//          TriggerClick=1;
+//          $("#bottom_download").animate({height:'480px'}, 500);
+//     }else{
+//          TriggerClick=0;
+//          $("#bottom_download").animate({height:'56px'}, 500);
+//     };
+//   });
+// });
+//     </script>
 
 	<script>
 	$.backstretch("../images/bg_home.jpeg")
 	</script>
+<script type="text/javascript">
 
+$(document).ready(function(){
+ $("#jumptoGreen").click(function(){
+ $("html, body, .content").animate({scrollTop: 630}, "slow");
+   return false;
+
+ });
+})
+</script>
+<script type="text/javascript">
+
+$(document).ready(function(){
+ $("#jumptoMyEnergy").click(function(){
+ $("html, body, .content").animate({scrollTop: 810}, "slow");
+   return false;
+
+ });
+})
+</script>
+<script type="text/javascript">
+
+$(document).ready(function(){
+ $("a.BackToTop").click(function(){
+ $("html, body, .content").animate({scrollTop: 0}, "slow");
+   return false;
+
+ });
+})
+</script>
   </body>
 </html>
