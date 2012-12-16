@@ -30,9 +30,10 @@
     <link rel="apple-touch-icon-precomposed" sizes="114x114" href="../assets/ico/apple-touch-icon-114-precomposed.png">
     <link rel="apple-touch-icon-precomposed" sizes="72x72" href="../assets/ico/apple-touch-icon-72-precomposed.png">
     <link rel="apple-touch-icon-precomposed" href="../assets/ico/apple-touch-icon-57-precomposed.png">
-  </head>
 
+  </head>
   <body>
+
 	<div id="bg_image_overlay">
 		&nbsp;
 	</div>
@@ -47,12 +48,10 @@
             <span class="icon-bar"></span>
           </a>
           <a href="https://www.myenergy.com/"><img class="brand" alt="image-logo" src="../images/logo_white.png" /></a>
-          <!-- Need logo to link to MyEnergy site -->
           <div class="nav-collapse collapse">
 
             <div class="navbar-form pull-right">
             <ul class="nav">
-              <!-- Need to confirm our headers and add appropriate links -->
               <li><a href="#GreenButton" id="jumptoGreen">Learn about the Green Button</a></li>
               <li><a href="#MyEnergy" id="jumptoMyEnergy">Learn about MyEnergy</a></li>
               <li><a href="http://web.myenergy.com/">Read our Blog</a></li>
@@ -65,7 +64,7 @@
       </div>
     </div>
     <div id="social">
-      <a href="http://clicktotweet.com/8018c"><img src="../assets/img/twitter.png"></a>
+      <a id="twitter" href="http://clicktotweet.com/8018c"><img src="../assets/img/twitter.png"></a>
     </div>
     <div class="main_landing" id="main_content">
 
@@ -170,7 +169,7 @@
    
     
     <!-- Need to alter these scripts and assign the "collapsing" animation to a specific object (close button).  Otherwise, it's impossible to enter data. -->
-//     <script>
+     <script>
 //     $(document).ready(function(){
 //   TriggerClick = 0;
 
@@ -245,5 +244,15 @@ $(document).ready(function(){
  });
 })
 </script>
+
+<script type="text/javascript">
+  (function() {
+    var po = document.createElement('script'); po.type = 'text/javascript'; po.async = true;
+    po.src = 'https://apis.google.com/js/plusone.js';
+    var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(po, s);
+  })();
+</script>
+<script src="https://apis.google.com/js/plusone.js"></script>
+<g:plus action="share"></g:plus>
   </body>
 </html>
