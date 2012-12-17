@@ -17,7 +17,7 @@
         padding-bottom: 40px;
       }
     </style>
-    <link href="../assets/css/bootstrap-responsive.css" rel="stylesheet">
+<!--     <link href="../assets/css/bootstrap-responsive.css" rel="stylesheet"> -->
 
     <!-- HTML5 shim, for IE6-8 support of HTML5 elements -->
     <!--[if lt IE 9]>
@@ -30,9 +30,17 @@
     <link rel="apple-touch-icon-precomposed" sizes="114x114" href="../assets/ico/apple-touch-icon-114-precomposed.png">
     <link rel="apple-touch-icon-precomposed" sizes="72x72" href="../assets/ico/apple-touch-icon-72-precomposed.png">
     <link rel="apple-touch-icon-precomposed" href="../assets/ico/apple-touch-icon-57-precomposed.png">
+    
+    <!-- Share This -->
 
+    <script type="text/javascript">var switchTo5x=true;</script>
+<script type="text/javascript" src="http://w.sharethis.com/button/buttons.js"></script>
+<script type="text/javascript">stLight.options({publisher: "4699df5f-2454-4a4a-bf24-53f4fe74c08f"});</script>
+
+<!-- End Share This -->
   </head>
-  <body>
+<body>
+
 
 	<div id="bg_image_overlay">
 		&nbsp;
@@ -87,10 +95,40 @@
         <img class="gb_map" id="gb_today" src="../assets/img/gb_today.jpg" />
         <p><h2>Map of current Green Button data availability from <b>MyEnergy</b>:</h2><br>
         <img class="gb_map" id="gb_myenergy" src="../assets/img/gb_myenergy.jpg" /><a class="BackToTop">Back to top</a>
+=======
+      <div>
+        <span class='st_facebook_vcount' id="st_facebook_vcount" displayText='Facebook'></span>
+        <span class='st_twitter_vcount' id="st_twitter_vcount" displayText='Tweet'></span>
+        <span class='st_googleplus_vcount' id="st_googleplus_vcount" displayText='Google +'></span>
+        <span class='st_linkedin_vcount' id="st_linkedin_vcount" displayText='LinkedIn'></span>
+        <span class='st_pinterest_vcount' id="st_pinterest_vcount" displayText='Pinterest'></span>
+        <span class='st_email_vcount' id="st_email_vcount" displayText='Email'></span>
+      </div>
+    <div class="main_landing" id="main_content">
+  
+  		<div id="landing-container">
+  			<h1>MyEnergy's Universal Green Button</h1>
+  			<br />
+  			<p>Use MyEnergy's Universal Green Button to see how much you spend on your utility bills and find out ways for you to save money. <br /><br />To get started, enter your zipcode below:</p>
+  			
+  			<form>
+  				<input id="zipbox" type="text" name="ZIP" placeholder="Enter Zip">
+  				<button id="submit" type="submit" formaction="./404.html" class="btn btn-green"><img id="greenbutton" src="../images/greenbutton.png" alt="green-button" />Show me how to save</button>
+  			</form>
+  			<img id="logos" src="../assets/img/myenergy+gbi.png" alt="myenergy-greenbutton" />
+        <br /><br>
+          <p id="GBI"><h3>What is the Green Button?</h3><h2>The Green Button is a White House initiative aimed at providing transparency to homeowners on their energy usage. Customers of any utility company should be able to securely download their utility usage, arming them with the power to make better decisions, save energy, and ultimately save money. Click <a href="http://www.greenbuttondata.org/greenabout.html">here</a> to learn more about the Green Button Initiative.</h2></p><br><a class="BackToTop">Back to top</a>
+          <p id="about"><br><h3>About MyEnergy</h3><h2>MyEnergy is a company that provides transparency to American homeowners on their energy usage. Its data delivery system expands data delivery coverage from approximately 25 million Americans to over 300 million. It allows users to download their Green Button Data with only one click. Now, you can track and reduce your home energy usage, compare usage to others, and in turn save both energy and money. Click <a href="http://www.myenergy.com/about">here</a> to learn more about MyEnergy.</h2><br><a class="BackToTop">Back to top</a>
+          <p><br><h3>Where is Green Button Data Available?</h3><br><h2>Map of current Green Button data availability directly from <b>utilities</b>:</h2><br>
+          <img class="gb_map" id="gb_today" src="../assets/img/gb_today.jpg" />
+          <p><h2>Map of current Green Button data availability from <b>MyEnergy</b>:</h2><br>
+          <img class="gb_map" id="gb_myenergy" src="../assets/img/gb_myenergy.jpg" /><a class="BackToTop">Back to top</a>
+        </div>
     </div>
+</div>
 
-<!--
-<div class="bottomButton">
+
+<!-- <div class="bottomButton">
    <div id="bottom_email"><img id="hide_button" src="../assets/img/hide-01.png" alt="hide-button"><br>Want to learn more about reducing your utility bills?<br><br>
     <form>
       <input id="email_address" type="text" placeholder="michael@bluth-re.com"><br>Email<br><br>
@@ -117,7 +155,7 @@
    </div>
       <hr>
 </div>
--->
+ -->
 <!-- /container -->
 
     <!-- Le javascript
@@ -138,7 +176,7 @@
     <script src="../assets/js/bootstrap-carousel.js"></script>
     <script src="../assets/js/bootstrap-typeahead.js"></script>
  -->
-    
+
     
     <script type="text/javascript" src="../assets/js/withbootjquery-1.8.2.js"></script>
     <script type="text/javascript" src="../assets/js/bootstrap.js"></script>
@@ -166,55 +204,14 @@
     <script type="text/javascript" src="../assets/js/popup/popup.js"></script>
     <script type="text/javascript" src="../assets/js/backstretch.js"></script>
 
-   
-    
-    <!-- Need to alter these scripts and assign the "collapsing" animation to a specific object (close button).  Otherwise, it's impossible to enter data. -->
-     <script>
-//     $(document).ready(function(){
-//   TriggerClick = 0;
-
-//   $("#bottom_email").click(function(){
-//     if(TriggerClick==0){
-//          TriggerClick=1;
-//          $("#bottom_email").animate({height:'180px'}, 500);
-//     }else{
-//          TriggerClick=0;
-//          $("#bottom_email").animate({height:'56px'}, 500);
-//     };
-//   });
-// });
-// $(document).ready(function(){
-//   TriggerClick = 0;
-
-//   $("#bottom_join").click(function(){
-//     if(TriggerClick==0){
-//          TriggerClick=1;
-//          $("#bottom_join").animate({height:'370px'}, 500);
-//     }else{
-//          TriggerClick=0;
-//          $("#bottom_join").animate({height:'56px'}, 500);
-//     };
-//   });
-// });
-// $(document).ready(function(){
-//   TriggerClick = 0;
-
-//   $("#bottom_download").click(function(){
-//     if(TriggerClick==0){
-//          TriggerClick=1;
-//          $("#bottom_download").animate({height:'480px'}, 500);
-//     }else{
-//          TriggerClick=0;
-//          $("#bottom_download").animate({height:'56px'}, 500);
-//     };
-//   });
-// });
-//     </script>
+    <script type='text/javascript' src='js/jquery-1.5.xx.js'></script>
+    <script type='text/javascript' src='js/jquery.jqzoom-core.js'></script>
 
 	<script>
 	$.backstretch("../images/bg_home.jpeg")
-	</script>
-<script type="text/javascript">
+  </script>
+ <script type="text/javascript">
+
 
 $(document).ready(function(){
  $("#jumptoGreen").click(function(){
@@ -223,7 +220,7 @@ $(document).ready(function(){
 
  });
 })
-</script>
+// </script>
 <script type="text/javascript">
 
 $(document).ready(function(){
