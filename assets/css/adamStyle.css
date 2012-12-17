@@ -288,7 +288,7 @@ right:50px;
 	border-radius:8px;
   line-height:1.4em;
   width:100%;
-	
+  position:relative;	
 }
 
 #landing-container h1 {
@@ -389,30 +389,39 @@ h3 {
   margin:0 0 20px 0;
 }
 
-#twitter {
-  opacity:1;
+#st_facebook_vcount{
+  top: 70px;
+  left: 20px;
   position:fixed;
-  margin: 5% 0 0px 93%;
-  height:40px;
-  width:40px;
-  max-width:200px;
-  z-index:5;
+  z-index: 5;
 }
-
-#facebook {
-  opacity:1;
+#st_twitter_vcount{
+  top: 170px;
+  left: 20px;
   position:fixed;
-  margin: 15% 0 0px 93%;
-  height:40px;
-  width:40px;
-  z-index:5;
+  z-index: 5;
 }
-
-.g-plus {
-  opacity:1;
+#st_googleplus_vcount{
+  top: 270px;
+  left: 20px;
   position:fixed;
-  margin: 25% 0 0px 93%;
-  height:40px;
-  width:40px;
-  z-index:5;
+  z-index: 5;
+}
+#st_linkedin_vcount{
+  top: 370px;
+  left: 20px;
+  position:fixed;
+  z-index: 5;
+}
+#st_pinterest_vcount{
+  top: 470px;
+  left: 20px;
+  position:fixed;
+  z-index: 5;
+}
+#st_email_vcount{
+  top: 570px;
+  left: 20px;
+  position:fixed;
+  z-index: 5;
 }
