@@ -11,84 +11,46 @@
     <!-- Le styles -->
     <link href="../assets/css/myenergy_bootstrap.css" rel="stylesheet">
     <link href="../assets/css/adamStyle.css" rel="stylesheet">
-    <style>
+	<link rel="stylesheet" href="http://code.jquery.com/ui/1.9.2/themes/base/jquery-ui.css" />
+    <script src="http://code.jquery.com/jquery-1.8.3.js"></script>
+    <script src="http://code.jquery.com/ui/1.9.2/jquery-ui.js"></script>
+
+    <style type="text/css">
       body {
         padding-top: 60px;
         padding-bottom: 40px;
+		
       }
-	/*<![CDATA[*/
-	/** ================================ External Header == **/
-	header.external {
-	background:#2c3337 url(../images/bg_ultrablur.png) 0px 0px repeat;
-	border-bottom:2px solid #13161d;
-	box-shadow:0px 1px 5px rgba(0,0,0,0.5);
-	-webkit-box-shadow:0px 1px 5px rgba(0,0,0,0.5);
-	-moz-box-shadow:0px 1px 5px rgba(0,0,0,0.5);
-	width:100%;
-	display:block;
-	position:fixed;
-	top:0;
-	padding:5px 15px;
-	z-index: 10;
-	font-family: "proxima-nova", "Helvetica Neue", "Helvetica","Arial", sans-serif;
-	min-width:960px;
-	}
-	header.external h1.logo{
-	margin-top:0px;
-	}
-	header.external ul.public_nav{
-	float:right;
-	margin:0px;
-	padding:0px;
-	list-style:none;
-	text-align:left;
-	margin-right:20px;
-	margin-bottom:8px;
-	}
-	header.external ul.public_nav li {
-	float:left;
-	font-size:13px;
-	color:#919a9e;
-	font-weight: 500;
-	margin-top:12px;
-	padding:0px 10px;
-	}
-	header.external ul.public_nav li a{
-	margin-top:-4px;
-	padding:3px 10px;
-	color:#919a9e;
-	display: inline-block;
-	}
-	header.external ul.public_nav li a:hover{
-	color:#00a3e7;
-	text-decoration:none;
-	}
-	header.external ul.public_nav li a.btn{
-	background:#ed7329;
-	text-shadow:none !important;
-	border:0px;
-	color:#fff;
-	font-weight: 500;
-	margin-top:-4px;
-	margin-right:3px;
-	}
-	header.external ul.public_nav li a.btn.create_link{
-	background:#ed7329;
-	}
-	header.external ul.public_nav li a.btn.create_link:hover{
-	background:#d86304;
-	}
-	header.external ul li a.btn.account_link{
-	background:#505a5f;
-	}
-	header.external ul.public_nav li a.btn.account_link:hover{
-	background:#405560;
-	}
-	header.external .mobile_nav {
-	display:none;
-	}
-	/*]]>*/
-	</style>
+
+	  	#content-slider {
+	      width: 50%;
+	      height: 6px;
+	      margin: 5px;
+	      background: #BBBBBB;
+	      position: relative;
+		  margin-left:25%;
+		  margin-bottom:30px;
+	    }
+		.ui-slider-handle {
+	      width: 8px;
+	      height: 14px;
+	      position: absolute;
+	      top: -4px;
+	      background: #478AFF;
+	      border: solid 1px black;
+	    }
+	
+		.panel img {
+			left: 45%;
+			position: relative;
+			margin-bottom:25px;
+		}
+		
+		.panel {
+			margin-bottom:100px;
+		}
+
+    </style>
     <link href="../assets/css/bootstrap-responsive.css" rel="stylesheet">
 
     <!-- HTML5 shim, for IE6-8 support of HTML5 elements -->
@@ -102,44 +64,304 @@
     <link rel="apple-touch-icon-precomposed" sizes="114x114" href="../assets/ico/apple-touch-icon-114-precomposed.png">
     <link rel="apple-touch-icon-precomposed" sizes="72x72" href="../assets/ico/apple-touch-icon-72-precomposed.png">
     <link rel="apple-touch-icon-precomposed" href="../assets/ico/apple-touch-icon-57-precomposed.png">
-  </head>
+  
+	<script type="text/javascript">
+	
+	<!-- Begin
+	function getParams() {
+	var idx = document.URL.indexOf('?');
+	var params = new Array();
+	if (idx != -1) {
+	var pairs = document.URL.substring(idx+1, document.URL.length).split('&');
+	for (var i=0; i<pairs.length; i++) {
+	nameVal = pairs[i].split('=');
+	params[nameVal[0]] = nameVal[1];
+	}
+	}
+	return params;
+	}
+	params = getParams();
+	// End -->
+	
+	</script>
 
-<body>
-<div id='bg_image_overlay'>
-&nbsp;
+</head>
+
+  
+
+  <body onload="findZip()">
+	<div id="bg_image_overlay">
+		&nbsp;
+	</div>
+
+    <div class="navbar navbar-inverse navbar-fixed-top">
+      <div class="navbar-inner">
+        <div class="container">
+          <a class="btn btn-navbar" data-toggle="collapse" data-target=".nav-collapse">
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+          </a>
+          <img class="brand" alt="image-logo" src="../images/logo_white.png" />
+          <!-- Need logo to link to MyEnergy site -->
+          <div class="nav-collapse collapse">
+
+            <div class="navbar-form pull-right">
+            <ul class="nav">
+              <!-- Need to confirm our headers and add appropriate links -->
+              <li><a href="http://www.myenergy.com/about">Learn about MyEnergy</a></li>
+              <li><a href="http://www.greenbuttondata.org/greenabout.html">Learn about the Green Button</a></li>
+              <li><a href="http://web.myenergy.com/">Read our Blog</a></li>
+              <li><a href="https://www.myenergy.com/utilities">For Utilities</a></li>
+              <li><a href="https://twitter.com/myenergy">Follow Us</a></li>
+			</ul>
+            </div>
+          </div><!--/.nav-collapse -->
+        </div>
+      </div>
+    </div>
+
+	<div class="panel landing-container index2" id="panel_back">
+
+		<h1>The average bill for <span class="zip">91180</span> is <span class="average">$0</span>.</h1>
+		<p>That buys <span id="kwh">80</span> kilowatt hours there, where 1 kilowatt hour costs <span class="kw-price">$.0963</span>.</p>
+		<img src="../assets/img/image.png" width="80" height="102" alt="Image">
+		<div id="content-slider"></div>
+		<p>A kilowatt hour is 1 hour's use of a kilowatt of electricity.  How many hours of light from a 100 watt incandescent light bulb can <span class="average" id="placeholder">$0</span> buy?</p>
+		
+		<p>Seem like a lot? Wonder where your bill is going? Sign up with myEnergy to learn more energy saving tips, or download your Green Button Information.</p>
+		
+		
+		
+	</div>
+ 
+<footer>
+<div class="bottomButton">
+   <div id="bottom_email">Want to learn more about reducing your utility bills?<br><br>
+    <form>
+      <input id="email_address" type="text" placeholder="michael@bluth-re.com"><br>Email<br><br>
+      <button id="email_submit" class="btn bottom_submit" type="submit">Keep me posted</button>
+    </form>
+   </div>
+   <div id="bottom_join">Ready to start saving more today?<br>Create a free MyEnergy profile<br><br><img src="../assets/img/fb_google.png" alt="fb-google">
+    <form>
+      <input id="join_fullname" type="text" placeholder="your name"><br>Full Name<br><br>
+      <input id="join_email" type="text" placeholder="michael@bluth-re.com"><br>Email<br><br>
+      <input id="join_password"><br>Password<br><br>
+      <button id="join" class="bottom_submit" type="submit">Create my account</button>
+    </form>
+   </div>
+   <div id="bottom_download">Download this data for free.<br>Developers, we have an API.<br><br>
+   <button id="xml">XML</button><button id="csv">CSV</button> <br>
+    <br><br>For developers interested in MyEnergy's data (now accessible by 300,000,000 Americans), please fill out the form below.<br><br>
+   <form>
+      <input id="dev_fullname" type="text"><br>Full Name<br><br>
+      <input id="dev_email" type="text"><br>Email<br><br>
+      <input id="dev_platform"><br>Platform<br><br>
+      <button id="download" class="btn" >Download my data</button>
+   </form>
+   </div>
 </div>
-<header class='external clearfix'>
-<h1 class='logo'>
-<a href='/'>MyEnergy</a>
-</h1>
-<ul class='public_nav clearfix'>
-<li>
-<a href='/'>Home</a>
-</li>
-<li>
-<a href='/about'>About</a>
-</li>
-<li>
-<a href='/team'>Team</a>
-</li>
-<li>
-<a href='/careers'>Careers</a>
-</li>
-<li>
-<a href='http://web.myenergy.com'>Blog</a>
-</li>
-<li>
-<a href='http://twitter.com/myenergy'>Twitter</a>
-</li>
-<li>
-<a class='btn create_link' data-remote href='/load_modal/signup'>
-Create Free Account
-</a>
-<a class='btn account_link' data-remote href='/load_modal/login'>
-Log In
-</a>
-</li>
-</ul>
-</header>
+</footer>
+<!-- /container -->
+
+    <!-- Le javascript
+    ================================================== -->
+    <!-- Placed at the end of the document so the pages load faster -->
+   <!-- 
+ <script src="../assets/js/jquery.js"></script>
+    <script src="../assets/js/bootstrap-transition.js"></script>
+    <script src="../assets/js/bootstrap-alert.js"></script>
+    <script src="../assets/js/bootstrap-modal.js"></script>
+    <script src="../assets/js/bootstrap-dropdown.js"></script>
+    <script src="../assets/js/bootstrap-scrollspy.js"></script>
+    <script src="../assets/js/bootstrap-tab.js"></script>
+    <script src="../assets/js/bootstrap-tooltip.js"></script>
+    <script src="../assets/js/bootstrap-popover.js"></script>
+    <script src="../assets/js/bootstrap-button.js"></script>
+    <script src="../assets/js/bootstrap-collapse.js"></script>
+    <script src="../assets/js/bootstrap-carousel.js"></script>
+    <script src="../assets/js/bootstrap-typeahead.js"></script>
+ -->
+    
+    <!--
+    <script type="text/javascript" src="../assets/js/withbootjquery-1.8.2.js"></script>
+    <script type="text/javascript" src="../assets/js/bootstrap.js"></script>
+    <script type="text/javascript" src="../assets/js/bootstrap-modal.js"></script>
+    <script type="text/javascript" src="../assets/js/bootstrap-scrollspy.js"></script>
+    <script type="text/javascript" src="../assets/js/bootstrap-tab.js"></script>
+    <script type="text/javascript" src="../assets/js/bootstrap-twipsy.js"></script>
+    <script type="text/javascript" src="../assets/js/bootstrap-popover.js"></script>
+    <script type="text/javascript" src="../assets/js/bootstrap-button.js"></script>
+    <script type="text/javascript" src="../assets/js/bootstrap-collapse.js"></script>
+    <script type="text/javascript" src="../assets/js/bootstrap-dropdown.js"></script>
+
+    <script type="text/javascript" src="../assets/js/jquery_scrollTo-1.4.2-min.js"></script>
+    <script type="text/javascript" src="../assets/js/jquery_localscroll-1.2.7-min.js"></script>
+    <script type="text/javascript" src="../assets/js/withbootjavascript.js"></script>
+
+    <script type="text/javascript" src="../assets/js/fader.js"></script>
+    <script type="text/javascript" src="../assets/js/jQuery_Cycle_Plugin.js"></script>
+   
+
+    <script type="text/javascript" src="../assets/js/data-visuals/highcharts.js"></script>
+    <script type="text/javascript" src="../assets/js/data-visuals/exporting.js"></script>
+    
+    
+    <script type="text/javascript" src="../assets/js/popup/popup.js"></script>
+
+	-->
+    <script type="text/javascript" src="../assets/js/backstretch.js"></script>
+
+   
+    
+    <!-- Need to alter these scripts and assign the "collapsing" animation to a specific object (close button).  Otherwise, it's impossible to enter data. -->
+    <script>
+    $(document).ready(function(){
+  TriggerClick = 0;
+
+  $("#bottom_email").click(function(){
+    if(TriggerClick==0){
+         TriggerClick=1;
+         $("#bottom_email").animate({height:'180px'}, 500);
+    }else{
+         TriggerClick=0;
+         $("#bottom_email").animate({height:'56px'}, 500);
+    };
+  });
+});
+$(document).ready(function(){
+  TriggerClick = 0;
+
+  $("#bottom_join").click(function(){
+    if(TriggerClick==0){
+         TriggerClick=1;
+         $("#bottom_join").animate({height:'370px'}, 500);
+    }else{
+         TriggerClick=0;
+         $("#bottom_join").animate({height:'56px'}, 500);
+    };
+  });
+});
+$(document).ready(function(){
+  TriggerClick = 0;
+
+  $("#bottom_download").click(function(){
+    if(TriggerClick==0){
+         TriggerClick=1;
+         $("#bottom_download").animate({height:'480px'}, 500);
+    }else{
+         TriggerClick=0;
+         $("#bottom_download").animate({height:'56px'}, 500);
+    };
+  });
+});
+    </script>
+
+	<script>
+	var zip;
+    function findZip(zip)
+    {
+		
+        zip = unescape(params["ZIP"]);
+        var isValid = /^[0-9]{5}(?:-[0-9]{4})?$/.test(zip);
+        // Check to see if a valid zip code was entered. If not, alert user.
+        if (!isValid)
+        {
+            alert('Invalid Zip Code. Please try again.');
+            return false;
+        }
+        // If zip was valid, start doing stuff with it.
+        // Additionally, this prevents anything from happening until a zip was entered. That is, this stuff won't happen on page load.
+        else
+        {
+            $.getJSON('myenergy_data/electricitysample.json', function functions(data) {
+                // Search for the given zip code. Alert if there is no data on that zip code.
+                if (data.feed.entry[0].title.search(zip) == -1)
+                {
+                    alert("Zip Code not found. Try again.");
+                }
+                // Else, grab data relevant to that zip code.
+                else
+                {
+                    // Initialize average variables
+					var averagecost = 0.0;
+                    var averagevalue = 0.0;
+                    var counter = 0;
+                    // Temporary, for testing. Just print stuff out about the zip's entry.
+                    var output="<ul>";
+                    // Set a variable for the path so I don't have to keep typing a really long path to find the element
+                    var intervalreadingpath = data.feed.entry[2].content.IntervalBlock.IntervalReading;
+                    // For loop to go through every element of IntervalReading
+                    for (var i in intervalreadingpath) {
+                        // Convert (start) to something readable by humans
+                        var date = new Date(intervalreadingpath[i].timePeriod.start * 1000);
+                        //output += Date(intervalreadingpath[i].timePeriod.start);
+                        //output += date;
+                        output+= "<li>" + 
+                            //Date(intervalreadingpath[i].timePeriod.start * 1000) 
+                            date + " ---- " + 
+                            (intervalreadingpath[i].timePeriod.duration / 86400) + " days" + " ---- " + 
+                            "$" + parseFloat(intervalreadingpath[i].cost) + " ---- " + 
+                            parseFloat(intervalreadingpath[i].value) + " kWh" + "</li>";
+                        averagevalue = averagevalue + parseFloat(intervalreadingpath[i].value);
+                        averagecost = averagecost + parseFloat(intervalreadingpath[i].cost);
+                        counter += 1;
+                    };
+
+					
+
+                    output+="</ul>";
+                    averagevalue = averagevalue / counter;
+                    averagecost = averagecost / counter;
+                    output+="AVERAGE VALUE IS " + averagevalue + " ---- ";
+                    output+="AVERAGE COST IS " + averagecost;
+					averagecost=Math.round(averagecost);
+					
+					
+					$(document).ready(function(){
+						
+						
+					  	var images = jQuery('.panel img'); //caches the query when dom is ready
+						
+						//var CELL_WIDTH = 150;
+						//var ASPECT = 1.5;
+						
+					  
+					  $("#content-slider").slider({
+						value:averagecost,
+						min:0,
+						max:500,
+					    animate: true,
+					    step: 1,
+					    slide: function( event, ui ) {
+							$("#placeholder").text('$' + $( "#content-slider" ).slider( "value" ) );
+							
+							var size = (ui.value / 100);
+							images.stop(true).animate({opacity:size});
+							
+						}
+					  });
+					$(".average").text('$' + $( "#content-slider" ).slider( "value" ) );
+					$('#kwh').text(Math.round(averagecost/.0963));
+
+					});
+					
+					
+					
+					
+                }
+				
+            });
+		}	
+	
+        // Prevent page from reloading.
+    return false;    
+    }
+</script>
+	<script>
+	$.backstretch("../images/bg_home.jpeg")
+	</script>
+
   </body>
 </html>
