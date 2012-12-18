@@ -41,9 +41,11 @@
 	    }
 	
 		.panel img {
-			left: 45%;
+			left: 35%;
 			position: relative;
 			margin-bottom:25px;
+			height:300px;
+			width:300px;
 		}
 		
 		.panel {
@@ -125,7 +127,7 @@
 
 		<h1>The average bill for <span class="zip">91180</span> is <span class="average">$0</span>.</h1>
 		<p>That buys <span id="kwh">80</span> kilowatt hours there, where 1 kilowatt hour costs <span class="kw-price">$.0963</span>.</p>
-		<img src="../assets/img/image.png" width="80" height="102" alt="Image">
+		<img src="../assets/img/bulb_glow.png" width="80" height="102" alt="Image">
 		<div id="content-slider"></div>
 		<p>A kilowatt hour is 1 hour's use of a kilowatt of electricity.  How many hours of light from a 100 watt incandescent light bulb can <span class="average" id="placeholder">$0</span> buy?</p>
 		
@@ -137,21 +139,21 @@
  
 <footer>
 <div class="bottomButton">
-   <div id="bottom_email">Want to learn more about reducing your utility bills?<br><br>
+   <div class="bottom_email" id="bottom_email"><p class="trigger1">Want to learn more about reducing your utility bills?</p>
     <form>
-      <input id="email_address" type="text" placeholder="michael@bluth-re.com"><br>Email<br><br>
+      <input id="email_address" type="text" /><br>Email<br><br>
       <button id="email_submit" class="btn bottom_submit" type="submit">Keep me posted</button>
     </form>
    </div>
-   <div id="bottom_join">Ready to start saving more today?<br>Create a free MyEnergy profile<br><br><img src="../assets/img/fb_google.png" alt="fb-google">
+   <div class="bottom_join" id="bottom_join"><p class="trigger1"> Ready to start saving more today?<br>Create a free MyEnergy profile</p><br><br><img src="../assets/img/fb_google.png" alt="fb-google">
     <form>
       <input id="join_fullname" type="text" placeholder="your name"><br>Full Name<br><br>
-      <input id="join_email" type="text" placeholder="michael@bluth-re.com"><br>Email<br><br>
+      <input id="join_email" type="text"><br>Email<br><br>
       <input id="join_password"><br>Password<br><br>
       <button id="join" class="bottom_submit" type="submit">Create my account</button>
     </form>
    </div>
-   <div id="bottom_download">Download this data for free.<br>Developers, we have an API.<br><br>
+   <div id="bottom_download"><p>Download this data for free.<br>Developers, we have an API.</p><br><br>
    <button id="xml">XML</button><button id="csv">CSV</button> <br>
     <br><br>For developers interested in MyEnergy's data (now accessible by 300,000,000 Americans), please fill out the form below.<br><br>
    <form>
@@ -163,70 +165,22 @@
    </div>
 </div>
 </footer>
-<!-- /container -->
 
-    <!-- Le javascript
-    ================================================== -->
-    <!-- Placed at the end of the document so the pages load faster -->
-   <!-- 
- <script src="../assets/js/jquery.js"></script>
-    <script src="../assets/js/bootstrap-transition.js"></script>
-    <script src="../assets/js/bootstrap-alert.js"></script>
-    <script src="../assets/js/bootstrap-modal.js"></script>
-    <script src="../assets/js/bootstrap-dropdown.js"></script>
-    <script src="../assets/js/bootstrap-scrollspy.js"></script>
-    <script src="../assets/js/bootstrap-tab.js"></script>
-    <script src="../assets/js/bootstrap-tooltip.js"></script>
-    <script src="../assets/js/bootstrap-popover.js"></script>
-    <script src="../assets/js/bootstrap-button.js"></script>
-    <script src="../assets/js/bootstrap-collapse.js"></script>
-    <script src="../assets/js/bootstrap-carousel.js"></script>
-    <script src="../assets/js/bootstrap-typeahead.js"></script>
- -->
-    
-    <!--
-    <script type="text/javascript" src="../assets/js/withbootjquery-1.8.2.js"></script>
-    <script type="text/javascript" src="../assets/js/bootstrap.js"></script>
-    <script type="text/javascript" src="../assets/js/bootstrap-modal.js"></script>
-    <script type="text/javascript" src="../assets/js/bootstrap-scrollspy.js"></script>
-    <script type="text/javascript" src="../assets/js/bootstrap-tab.js"></script>
-    <script type="text/javascript" src="../assets/js/bootstrap-twipsy.js"></script>
-    <script type="text/javascript" src="../assets/js/bootstrap-popover.js"></script>
-    <script type="text/javascript" src="../assets/js/bootstrap-button.js"></script>
-    <script type="text/javascript" src="../assets/js/bootstrap-collapse.js"></script>
-    <script type="text/javascript" src="../assets/js/bootstrap-dropdown.js"></script>
-
-    <script type="text/javascript" src="../assets/js/jquery_scrollTo-1.4.2-min.js"></script>
-    <script type="text/javascript" src="../assets/js/jquery_localscroll-1.2.7-min.js"></script>
-    <script type="text/javascript" src="../assets/js/withbootjavascript.js"></script>
-
-    <script type="text/javascript" src="../assets/js/fader.js"></script>
-    <script type="text/javascript" src="../assets/js/jQuery_Cycle_Plugin.js"></script>
-   
-
-    <script type="text/javascript" src="../assets/js/data-visuals/highcharts.js"></script>
-    <script type="text/javascript" src="../assets/js/data-visuals/exporting.js"></script>
-    
-    
-    <script type="text/javascript" src="../assets/js/popup/popup.js"></script>
-
-	-->
     <script type="text/javascript" src="../assets/js/backstretch.js"></script>
 
-   
-    
-    <!-- Need to alter these scripts and assign the "collapsing" animation to a specific object (close button).  Otherwise, it's impossible to enter data. -->
     <script>
     $(document).ready(function(){
   TriggerClick = 0;
 
-  $("#bottom_email").click(function(){
+  $(".bottom_email").click(function(){
+	console.log("yes");
     if(TriggerClick==0){
          TriggerClick=1;
-         $("#bottom_email").animate({height:'180px'}, 500);
+console.log("yes");
+         $(".bottom_email").animate({height:'180px'}, 500);
     }else{
          TriggerClick=0;
-         $("#bottom_email").animate({height:'56px'}, 500);
+         $(".bottom_email").animate({height:'47px'}, 500);
     };
   });
 });
@@ -236,10 +190,11 @@ $(document).ready(function(){
   $("#bottom_join").click(function(){
     if(TriggerClick==0){
          TriggerClick=1;
+console.log("yes");
          $("#bottom_join").animate({height:'370px'}, 500);
     }else{
          TriggerClick=0;
-         $("#bottom_join").animate({height:'56px'}, 500);
+         $("#bottom_join").animate({height:'47px'}, 500);
     };
   });
 });
@@ -252,7 +207,7 @@ $(document).ready(function(){
          $("#bottom_download").animate({height:'480px'}, 500);
     }else{
          TriggerClick=0;
-         $("#bottom_download").animate({height:'56px'}, 500);
+         $("#bottom_download").animate({height:'47px'}, 500);
     };
   });
 });
@@ -324,14 +279,11 @@ $(document).ready(function(){
 						
 					  	var images = jQuery('.panel img'); //caches the query when dom is ready
 						
-						//var CELL_WIDTH = 150;
-						//var ASPECT = 1.5;
-						
 					  
 					  $("#content-slider").slider({
 						value:averagecost,
 						min:0,
-						max:500,
+						max:200,
 					    animate: true,
 					    step: 1,
 					    slide: function( event, ui ) {
@@ -344,7 +296,7 @@ $(document).ready(function(){
 					  });
 					$(".average").text('$' + $( "#content-slider" ).slider( "value" ) );
 					$('#kwh').text(Math.round(averagecost/.0963));
-
+					$(images.css({opacity:(averagecost/500)}));
 					});
 					
 					

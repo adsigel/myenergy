@@ -105,9 +105,7 @@ margin-bottom:5px;
   background-color: hsl(201, 100%, 30%) !important;
   position:fixed;
   bottom:1px;
-  left:10%;
-  height:56px;
-  width:350px;
+  height:47px;
   text-align:left;
   vertical-align:text-top;
   font-size:18px;
@@ -128,12 +126,11 @@ margin-bottom:5px;
 #bottom_join {
   padding:10px;
   position:fixed;
-  left:36%;
+  left:34%;
   bottom:1px;
-  height:56px;
+  height:47px;
   text-align:left;
   vertical-align:text-top;
-  width:350px;
   font-size:18px;
   background-color: hsl(126, 67%, 26%) !important;
   background-repeat: repeat-x;
@@ -153,11 +150,10 @@ margin-bottom:5px;
 #bottom_download {
   padding:10px;
   position:fixed;
-  left:62%;
+  left:65%;
   bottom:1px;
-  height:56px;
+  height:47px;
   background-color: hsl(201, 100%, 30%) !important;
-  width:350px;
   text-align:left;
   vertical-align:text-top;
   font-size:18px;
@@ -297,7 +293,7 @@ right:50px;
 .bottom_submit {
   display: inline-block;
   margin-bottom: 3px;
-  width: 350px;
+
   padding:10px;
   height: 36px;
   line-height: 17px;
@@ -501,8 +497,14 @@ h3 {
   z-index: 5;
 }
 
+.bottomButton {
+	width:100%;
+}
+
 .bottomButton div {
 	z-index:5;
+	display:inline-block;
+	width:33%;
 }
 
 .index2 h1 {
@@ -518,3 +520,10 @@ h3 {
   position:fixed;
   z-index: 5;
 }
+
+#bottom_email form{
+	margin-top:20px;
+}
+
+
+
